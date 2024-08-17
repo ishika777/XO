@@ -1,0 +1,95 @@
+body{
+    text-align: center;
+    height: 80vh;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+}
+h1{
+    text-align: center;
+    font-weight: 800;
+    font-size: 40px;
+}
+.tile{
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 900;
+    cursor: pointer;
+}
+.container{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: blue;
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 10px;
+}
+.row1, .row2, .row3{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.reset{
+    width: 60px;
+    height: fit-content;
+    border: none;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 5px;
+}
+.reset:hover{
+    background-color: rgba(0, 128, 0, 0.833);
+}
+.winneranimation{
+    height: 10px;
+    width: 10px;
+    color: black;
+    position: absolute;
+    left: 44%;
+    margin-left: auto;
+    font-size: 10px;
+    font-weight: 800;
+    opacity: 0;
+    animation: winner 2s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    text-align: center;
+}
+@keyframes winner{
+    50%{
+        opacity: 0.8;
+        height: 50px;
+        width: 50px;
+        font-size: 50px;
+    }
+    100%{
+        opacity: 1;
+        height: 150px;
+        width: 150px;
+        font-size: 150px;
+    }
+}
+.fade{
+    animation: fading 2s linear 1s forwards;
+}
+@keyframes fading{
+    50%{
+        opacity: 0.5;
+    }100%{
+        opacity: 0;
+    }
+}
